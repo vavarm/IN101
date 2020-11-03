@@ -1,0 +1,41 @@
+// Fichier dans lequel vous écrirez les fonctions que l'on vous demandera de définir
+
+#include "listesEtTableaux.cpp"
+
+// Fonction moyenne
+// Données: a : nombre réel, b : nombre réel
+// Résultat: Nombreréel, la moyenne de a et b
+float moyenne(float a, float b)
+{
+  return (a+b)/2;
+}
+
+float max3(float a, float b, float c)
+{
+  return max(a,max(b,c));
+}
+
+bool multiple (int x, int y)
+{
+  return y==0 ? (x==0) : (x%y==0? true : false);
+}
+
+bool triangleEqui (float a, float b, float c)
+{
+  return a==b && b==c;
+}
+
+bool triangle (float a, float b, float c)
+{
+  return a+b<c ? false : (a+c<b ? false : !(b+c<a));
+}
+
+bool triangleRect (float a, float b, float c)
+{
+  return a+b==c ? true : (a+c==b ? true : b+c==a);
+}
+
+bool triangleIso (float a, float b, float c)
+{
+  return a==b? (b==c ? true : a==c): false;
+}
